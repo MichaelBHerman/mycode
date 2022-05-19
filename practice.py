@@ -115,8 +115,41 @@
 # if hostname == "MTG":
 #     print("the hostname was found to be MTG")
 
-hostname = input("what value should we set for hostname?")
-if hostname.lower() == "mtg":
-    print("the hostname was found to be mtg")
-    print("hostname matches expected config")
-print("exiting the script")    
+# hostname = input("what value should we set for hostname?")
+# if hostname.lower() == "mtg":
+#     print("the hostname was found to be mtg")
+#     print("hostname matches expected config")
+# print("exiting the script")  
+
+#################################### lab 40 ###############################
+# """Alta3 Research | RZFeeser
+#    Conditionals - strings test true"""
+
+# ipchk = "192.168.0.1"
+
+# # a string tests as True
+# if ipchk:
+#    print("Looks like the IP address was set: " + ipchk)
+
+# ipchk = input("apply an IP address: ")
+# if ipchk:
+#     print("Lookls like the IP address was set: " + ipchk)
+
+# ipchk = input("Apply an IP address: ") # this line now prompts the user for input
+
+# # a provided string will test true
+# if ipchk:
+#    print("Looks like the IP address was set: " + ipchk) # indented under if
+# else:    # if data is NOT provided
+#    print("You did not provide input.") # indented under else
+
+ipchk = input("Apply an IP address: ") # this line now prompts the user for input
+
+# if user set IP of gateway
+if ipchk == "192.168.70.1":
+   print("Looks like the IP address of the Gateway was set: " + ipchk + " This is not recommended.")
+elif ipchk: # if any data is provided, this will test true
+   print("Looks like the IP address was set: " + ipchk) # indented under if
+else: # if data is NOT provided
+   print("You did not provide input.") # indented under else
+   
