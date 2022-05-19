@@ -64,35 +64,59 @@
 # print(forged)
 
 #############################lab 32#######################################
-switch = {"hostname": "sw1", "ip": "10.0.1.1", "version": "1.2", "vendor": "cisco"}
-print(switch["hostname"])
-print(switch["ip"])
-# print(switch["lynx"])
-## request a 'fake' key with .get() method
-print( "First test - .get()" )
-print( switch.get("lynx") )
+# switch = {"hostname": "sw1", "ip": "10.0.1.1", "version": "1.2", "vendor": "cisco"}
+# print(switch["hostname"])
+# print(switch["ip"])
+# # print(switch["lynx"])
+# ## request a 'fake' key with .get() method
+# print( "First test - .get()" )
+# print( switch.get("lynx") )
 
-print( "Second test - .get()" )
-print( switch.get("lynx", "THE KEY IS IN ANOTHER CASTLE!") )
+# print( "Second test - .get()" )
+# print( switch.get("lynx", "THE KEY IS IN ANOTHER CASTLE!") )
 
-print( "Third test - .get()" )
-print( switch.get("version") )
-print( "Fourth test - .keys()" )
-print( switch.keys() )
+# print( "Third test - .get()" )
+# print( switch.get("version") )
+# print( "Fourth test - .keys()" )
+# print( switch.keys() )
 
-print( "Fifth test - .values()" )
-print( switch.values() )
-print( "Sixth test - .pop()" )
-switch.pop("version") # removes this key (and value) pair
-print( switch.keys() )   # notice the value of version is gone
-print( switch.values() ) # notice the value 1.2
+# print( "Fifth test - .values()" )
+# print( switch.values() )
+# print( "Sixth test - .pop()" )
+# switch.pop("version") # removes this key (and value) pair
+# print( switch.keys() )   # notice the value of version is gone
+# print( switch.values() ) # notice the value 1.2
 
-print( "Seventh test - ADD a new value" )
-switch["adminlogin"] = "karl08"
-print( switch.keys() )
-print( switch.values() )
+# print( "Seventh test - ADD a new value" )
+# switch["adminlogin"] = "karl08"
+# print( switch.keys() )
+# print( switch.values() )
 
-print( "Eighth test - ADD a new value" )
-switch["password"] = "qwerty"
-print( switch.keys() )
-print( switch.values() )
+# print( "Eighth test - ADD a new value" )
+# switch["password"] = "qwerty"
+# print( switch.keys() )
+# print( switch.values() )
+
+##################lab 32 challenge#################################
+# Gambit={'Real Name':'Remy LeBeau','First Appearance':'Uncanny X-Men Annual #14 (July, 1990), Uncanny X-Men #266 (August, 1990)','Creators':['Chris Claremont','Jim Lee'],'Team Affliations':['X-Factor','X-Men','Marauders','Horsemen of Apocalypse,'],'Base of Operations':'Salem Centre, New York'}
+
+# print(Gambit.keys())
+# choice = input("Please enter a key: ")
+# print("Gambit's " + choice + " is: " + Gambit.get(choice))
+################################### lab 36 ##################################################
+
+
+###################################lab 39#################################
+# hostname = "MTG"
+# if hostname == "MTG":
+#     print("The hostname was found to be MTG")
+
+# hostname = input("What value should we set for hostname?")
+# if hostname == "MTG":
+#     print("the hostname was found to be MTG")
+
+hostname = input("what value should we set for hostname?")
+if hostname.lower() == "mtg":
+    print("the hostname was found to be mtg")
+    print("hostname matches expected config")
+print("exiting the script")    
