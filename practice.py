@@ -143,13 +143,230 @@
 # else:    # if data is NOT provided
 #    print("You did not provide input.") # indented under else
 
-ipchk = input("Apply an IP address: ") # this line now prompts the user for input
+# ipchk = input("Apply an IP address: ") # this line now prompts the user for input
 
-# if user set IP of gateway
-if ipchk == "192.168.70.1":
-   print("Looks like the IP address of the Gateway was set: " + ipchk + " This is not recommended.")
-elif ipchk: # if any data is provided, this will test true
-   print("Looks like the IP address was set: " + ipchk) # indented under if
-else: # if data is NOT provided
-   print("You did not provide input.") # indented under else
+# # if user set IP of gateway
+# if ipchk == "192.168.70.1":
+#    print("Looks like the IP address of the Gateway was set: " + ipchk + " This is not recommended.")
+# elif ipchk: # if any data is provided, this will test true
+#    print("Looks like the IP address was set: " + ipchk) # indented under if
+# else: # if data is NOT provided
+#    print("You did not provide input.") # indented under else
+
+###################################################lab 42##########################
+
+# round = 0
+# while True:
+#     round = round + 1
+#     print('Finish the movie title, "Monty Python\'s The Life of ______"')
+#     answer = input("Your guess--> ")
+#     if answer == "Brian":
+#         print("correct")
+#         break
+#     elif round == 3:
+#         print("sorry, the answer was Brian")
+#         break
+#     else: 
+#         print("sorry! try again!")
+        
+ #!/usr/bin/python3
+# """Alta3 Research | RZFeeser
+#   Conditionals - Life of Brian guessing game without a while True loop."""
+
+# round = 0
+# answer = " "
+
+# while round < 3 and answer != "Brian":
+#     round += 1     # increase the round counter by 1
+#     answer = input('Finish the movie title, "Monty Python\'s The Life of ______": ')
+#     if answer == "Brian": # logic to check if user gave correct answer
+#         print("Correct!")
+#     elif answer == "shrubbery":
+#         print("You gave the super secret answer!")    
+#     elif round == 3:    # logic to ensure round has not yet reached 3
+#         print("Sorry, the answer was Brian.")    
+#     else:                 # if answer was wrong
+#         print("Sorry. Try again!")
+       
+
+############################### busted code warmup ##########################################
+#!/usr/bin/env python
+# A program that prompts a user for two operators and operation (plus or minus)
+# the program then shows the result.
+# The user may enter q to exit the program.
+
+# def add(num1,num2):
+#     print("\n" + str(num1) + " + " + str(num2) + " = " + str(calc1 + calc2))
+    
+# def sub():
+#     print("\n" + str(num1) + " - " + str(num2) + " = " + str(num1 - num2))
+
+
+# def calculator():
    
+
+#     while True:
+       
+#         calc1 = input("\nWhat is the first operator? Or, enter q to quit: ")
+#         if calc1.lower() == "Q":
+#             break
+       
+        
+#         calc2 = input("\nWhat is the second operator? Or, enter q to quit: ")
+#         if calc2.lower() == "q":
+#          break
+      
+#         print("Enter an operation to perform on the two operators (+ or -): ")
+#         operation = input()
+#         if operation == "+":
+#             add(calc1,calc2)
+#         elif operation == '-':
+#             sub(calc1,calc2)
+#         else:
+#             print("\n Not a valid entry. Restarting...")
+
+# calculator()
+
+# classinfo = {'all': [
+#          {'name': 'Cat',
+#           'skill level': 'amazing',
+#           'spirit animal': 'Chinchilla',
+#           'super power': 'Body Part Substitution'},
+#          {'name': 'Chris',
+#           'skill level': 'astonishing',
+#           'spirit animal': 'Chipmunk',
+#           'super power': 'Camouflage'},
+#          {'name': 'Dao',
+#           'skill level': 'astounding',
+#           'spirit animal': 'Clam',
+#           'super power': 'Bone Manipulation'},
+#          {'name': 'David',
+#           'skill level': 'awe-inspiring',
+#           'spirit animal': 'Clownfish',
+#           'super power': 'Claw Retraction'},
+#          {'name': 'Henwin',
+#           'skill level': 'breathtaking',
+#           'spirit animal': 'Cobra',
+#           'super power': 'Deflection'},
+#          {'name': 'Herman',
+#           'skill level': 'imposing',
+#           'spirit animal': 'Condor',
+#           'super power': 'Fang Retraction'},
+#          {'name': 'Jose',
+#           'skill level': 'inspiring',
+#           'spirit animal': 'Constrictor',
+#           'super power': 'Helicopter Propulsion'},
+#          {'name': 'Justin',
+#           'skill level': 'magnificent',
+#           'spirit animal': 'Coral',
+#           'super power': 'Invisibility'},
+#          {'name': 'Kris',
+#           'skill level': 'majestic',
+#           'spirit animal': 'Cougar',
+#           'super power': 'Immobility'},
+#          {'name': 'Mannie',
+#           'skill level': 'miraculous',
+#           'spirit animal': 'Coyote',
+#           'super power': 'Immutability'},
+#          {'name': 'Marcos',
+#           'skill level': 'spectacular',
+#           'spirit animal': 'Crab',
+#           'super power': 'Invulnerability'},
+#          {'name': 'Marshall',
+#           'skill level': 'staggering',
+#           'spirit animal': 'Crane',
+#           'super power': 'Jet Propulsion'},
+#          {'name': 'Michael',
+#           'skill level': 'stunning',
+#           'spirit animal': 'Crawdad',
+#           'super power': 'Invulnerability'},
+#          {'name': 'Mike',
+#           'skill level': 'stupefying',
+#           'spirit animal': 'Crocodile',
+#           'super power': 'Muscle Manipulation'},
+#          {'name': 'Nikko',
+#           'skill level': 'sublime',
+#           'spirit animal': 'Crow',
+#           'super power': 'Needle Projection'},
+#          {'name': 'Phil',
+#           'skill level': 'wonderful',
+#           'spirit animal': 'Cuckoo',
+#           'super power': 'Prehensile Tongue'},
+#          {'name': 'Ryan',
+#           'skill level': 'wondrous',
+#           'spirit animal': 'Cicada',
+#           'super power': 'Regenerative Healing Factor'},
+#          {'name': 'Sachin',
+#           'skill level': 'affecting',
+#           'spirit animal': 'Damselfly',
+#           'super power': 'Replication'},
+#          {'name': 'Samekh',
+#           'skill level': 'arresting',
+#           'spirit animal': 'Deer',
+#           'super power': 'Self-Detonation'},
+#          {'name': 'Will',
+#           'skill level': 'august',
+#           'spirit animal': 'Dingo',
+#           'super power': 'Super Strength'}]}
+
+# print(classinfo["all"][12]["name"])
+
+# name = classinfo["all"][12]["name"]
+# superpower = classinfo["all"][12]["super power"]
+
+# print('My name is ' + name + " and my superpower is " + superpower)
+
+# for x in classinfo['all']:
+#     print(x["name"])
+
+
+##########################################lab 46 #############################################
+# iplist = ["10.1.1.1", "10.2.2.2", "10.3.3.3"] # list of IP (str)
+
+# for ip in iplist:
+#     print(ip) 
+
+###################################### 5/23 warmup ######################
+#!/usr/bin/env python
+import sys
+import time
+
+
+def print1by1(text, delay=0.1):
+    # there's nothing wrong with this function, it's just some cool code!
+    for c in text:
+        sys.stdout.write(c)
+        sys.stdout.flush()
+        time.sleep(delay)
+
+
+
+def main():
+    def name_grabber():
+        while True:
+            try:
+                name= input("What is your name?\n>")
+                num= input("Pick a number between 1 and 3")
+                if num in ["1","2","3"]:
+                    return name, num
+            except:
+                print("Bad input.")
+
+
+
+
+    num_dict= {"1":"great","2":"awesome","3":"superb"}
+    # name, num= name_grabber()
+    result = name_grabber()
+    print(result)
+    with open("horoscope.txt", "w") as fileobj:
+        fileobj.write(f"{result}, I predict today will be {num_dict[result[1]].upper()}!")
+
+    # not an error per se, but it's undesirable that
+    # this gets written out with no spaces
+    # fix the for loop to give a nicer output!
+    for x in ["YOUR ", "FUTURE ", "HAS ", "BEEN ", "WRITTEN ", "TO ", " HOROSCOPE.TXT..."]:
+        print1by1(x)
+
+main()
+
