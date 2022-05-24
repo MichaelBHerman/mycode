@@ -328,45 +328,109 @@
 
 ###################################### 5/23 warmup ######################
 #!/usr/bin/env python
-import sys
-import time
+# import sys
+# import time
 
 
-def print1by1(text, delay=0.1):
-    # there's nothing wrong with this function, it's just some cool code!
-    for c in text:
-        sys.stdout.write(c)
-        sys.stdout.flush()
-        time.sleep(delay)
-
-
-
-def main():
-    def name_grabber():
-        while True:
-            try:
-                name= input("What is your name?\n>")
-                num= input("Pick a number between 1 and 3")
-                if num in ["1","2","3"]:
-                    return name, num
-            except:
-                print("Bad input.")
+# def print1by1(text, delay=0.1):
+#     # there's nothing wrong with this function, it's just some cool code!
+#     for c in text:
+#         sys.stdout.write(c)
+#         sys.stdout.flush()
+#         time.sleep(delay)
 
 
 
+# def main():
+#     def name_grabber():
+#         while True:
+#             try:
+#                 name= input("What is your name?\n>")
+#                 num= input("Pick a number between 1 and 3")
+#                 if num in ["1","2","3"]:
+#                     return name, num
+#             except:
+#                 print("Bad input.")
 
-    num_dict= {"1":"great","2":"awesome","3":"superb"}
-    # name, num= name_grabber()
-    result = name_grabber()
-    print(result)
-    with open("horoscope.txt", "w") as fileobj:
-        fileobj.write(f"{result}, I predict today will be {num_dict[result[1]].upper()}!")
 
-    # not an error per se, but it's undesirable that
-    # this gets written out with no spaces
-    # fix the for loop to give a nicer output!
-    for x in ["YOUR ", "FUTURE ", "HAS ", "BEEN ", "WRITTEN ", "TO ", " HOROSCOPE.TXT..."]:
-        print1by1(x)
 
-main()
+
+#     num_dict= {"1":"great","2":"awesome","3":"superb"}
+#     # name, num= name_grabber()
+#     result = name_grabber()
+#     # print(result)
+#     with open("horoscope.txt", "w") as fileobj:
+#         fileobj.write(f"{result}, I predict today will be {num_dict[result[1]].upper()}!")
+
+#     # not an error per se, but it's undesirable that
+#     # this gets written out with no spaces
+#     # fix the for loop to give a nicer output!
+#     for x in ["YOUR ", "FUTURE ", "HAS ", "BEEN ", "WRITTEN ", "TO ", " HOROSCOPE.TXT..."]:
+#         print1by1(x)
+
+# main()
+
+###################################lab 68 #############################
+#!/usr/bin/python3
+# """RZFeeser | Alta3 Research
+#    Creating a simple dice program utilizing classes."""
+
+# # standard library
+# from random import randint
+
+# class Player:
+#     def __init__(self):
+#         self.dice = []
+
+#     def roll(self):
+#         self.dice = [] # clears current dice
+#         for i in range(3):  # make 3 rolls
+#             self.dice.append(randint(1,6))   # 1 to 6 inclusive
+
+#     def get_dice(self): # returns the dice rolls
+#         return self.dice
+
+# def main():
+#     """called at run time"""
+
+#     ## create our player objects
+#     player1 = Player()
+#     player2 = Player()
+
+#     player1.roll()
+#     player2.roll()
+
+#     print(f"Player 1 rolled {player1.get_dice()}")
+#     print(f"Player 2 rolled {player2.get_dice()}")
+
+#     # determine which player won
+#     if sum(player1.get_dice()) == sum(player2.get_dice()):
+#         print("Draw!")
+#     elif sum(player1.get_dice()) > sum(player2.get_dice()):
+#         print("Player 1 wins!")
+#     else:
+#         print("Player 2 wins!")
+
+
+# if __name__ == "__main__":
+#     main()
+
+############################################ ISS Morning Challenge #################
+import requests
+import datetime
+
+res = requests.get("http://api.open-notify.org/iss-now.json")
+data = res.json()
+print(data)
+latitude = data["iss_position"]["latitude"]
+longitude = data["iss_position"]["longitude"]
+epoch_time = data["timestamp"]
+
+print("Current Location of the ISS: ")
+print("Lat: " + latitude)
+print("lon: " + longitude)
+
+date_time = datetime.datetime.fromtimestamp( epoch_time ) 
+print("Converted Datetime:", date_time )   
+
 
