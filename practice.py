@@ -416,21 +416,24 @@
 #     main()
 
 ############################################ ISS Morning Challenge #################
-import requests
-import datetime
+# import requests
+# import datetime
 
-res = requests.get("http://api.open-notify.org/iss-now.json")
-data = res.json()
-print(data)
-latitude = data["iss_position"]["latitude"]
-longitude = data["iss_position"]["longitude"]
-epoch_time = data["timestamp"]
+# res = requests.get("http://api.open-notify.org/iss-now.json")
+# data = res.json()
+# print(data)
+# latitude = data["iss_position"]["latitude"]
+# longitude = data["iss_position"]["longitude"]
+# epoch_time = data["timestamp"]
 
-print("Current Location of the ISS: ")
-print("Lat: " + latitude)
-print("lon: " + longitude)
+# print("Current Location of the ISS: ")
+# print("Lat: " + latitude)
+# print("lon: " + longitude)
 
-date_time = datetime.datetime.fromtimestamp( epoch_time ) 
-print("Converted Datetime:", date_time )   
+# date_time = datetime.datetime.fromtimestamp( epoch_time ) 
+# print("Converted Datetime:", date_time )  
+# 
+# ############################################zodiac restructuring###########################
+#  
 
 
